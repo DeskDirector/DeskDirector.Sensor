@@ -34,3 +34,15 @@ The allowed ephemeral port count is from IPv4 setting. Since they can be differe
 <# PowerShell cmd to install Sensor as Windows Service #>
 .\sc.exe create sensor binPath="C:\xxx\DdManager.Sensor.exe"
 ```
+
+## Application Insights
+
+Use following query to visualize ports count on application insights. Device name is defined inside `appsettings.Production.json`.
+
+```
+customMetrics
+| where name == "sensor_tcp_ephemeral_ports"
+| where customDimensions.device == "device-name"
+| order by timestamp desc
+| render timechart 
+```
