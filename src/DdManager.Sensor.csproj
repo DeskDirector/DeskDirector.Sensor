@@ -5,7 +5,7 @@
     <UserSecretsId>dotnet-DdManager.Sensor-32558B96-AC2E-49E0-B423-543DF9748463</UserSecretsId>
     <LangVersion>9.0</LangVersion>
     <Nullable>enable</Nullable>
-    <Version>1.0.5</Version>
+    <Version>1.0.6</Version>
   </PropertyGroup>
 
   <ItemGroup>
