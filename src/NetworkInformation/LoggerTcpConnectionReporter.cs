@@ -42,7 +42,7 @@ namespace DdManager.Sensor.NetworkInformation
             _logger.LogInformation($"# Local {first.Address} used {first.Percentage:0.0}% of allowed ephemeral ports");
 
             if (offend != null) {
-                _logger.LogInformation($"* Top Offend Process: {offend.Name}/{offend.Id}".PadRight(60) + offend.Count);
+                _logger.LogInformation($"* Top Offend Process: {offend.Name} ({offend.UserName})/{offend.Id}".PadRight(60) + offend.Count);
             }
 
             if (offendRemote != null) {

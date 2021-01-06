@@ -47,6 +47,7 @@ namespace DdManager.Sensor.NetworkInformation
 
             if (offendProcess != null) {
                 metric.Properties["offend_name"] = offendProcess.Name;
+                metric.Properties["offend_user_name"] = offendProcess.UserName;
                 metric.Properties["offend_id"] = offendProcess.Id.ToString();
                 metric.Properties["offend_count"] = offendProcess.Count.ToString();
             }

@@ -65,6 +65,8 @@ namespace DdManager.Sensor.NetworkInformation
     {
         public string Name { get; }
 
+        public string UserName { get; }
+
         public uint Id { get; }
 
         public int Count { get; private set; }
@@ -73,7 +75,13 @@ namespace DdManager.Sensor.NetworkInformation
         {
             Id = connection.ProcessId;
             Count = 1;
-            Name = processes.TryGetValue(connection.ProcessId, out Process? p) ? p.ProcessName : "unknown";
+            if (processes.TryGetValue(connection.ProcessId, out Process? p)) {
+                Name = p.ProcessName;
+                UserName = p.GetProcessUser() ?? "unknown";
+            } else {
+                Name = "unknown";
+                UserName = "unknown";
+            }
         }
 
         public void Increment()

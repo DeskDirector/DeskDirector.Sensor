@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk.Worker">
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <UserSecretsId>dotnet-DdManager.Sensor-32558B96-AC2E-49E0-B423-543DF9748463</UserSecretsId>
     <LangVersion>9.0</LangVersion>
     <Nullable>enable</Nullable>
